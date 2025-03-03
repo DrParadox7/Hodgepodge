@@ -380,6 +380,10 @@ public class FixesConfig {
     @Config.DefaultBoolean(true)
     public static boolean fixBibliocraftPathSanitization;
 
+    @Config.Comment("Fix Bibliocraft invalid Writing Desk Crash")
+    @Config.DefaultBoolean(true)
+    public static boolean fixBibliocraftWritingDeskCrash;
+
     // Biomes O' Plenty
 
     @Config.Comment("Removes duplicate Fermenter and Squeezer recipes and flower registration")

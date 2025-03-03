@@ -922,7 +922,10 @@ public enum Mixins {
             .addTargetedMod(TargetedMod.BIBLIOCRAFT)),
     BIBLIOCRAFT_PATH_SANITIZATION_FIX(new Builder("Path sanitization fix")
             .addMixinClasses("bibliocraft.MixinPathSanitization").setPhase(Phase.LATE).setSide((Side.BOTH))
-            .setApplyIf(() -> FixesConfig.fixBibliocraftPackets).addTargetedMod(TargetedMod.BIBLIOCRAFT)),
+            .setApplyIf(() -> FixesConfig.fixBibliocraftPathSanitization).addTargetedMod(TargetedMod.BIBLIOCRAFT)),
+    BIBLIOCRAFT_WRITINGDESKCRASH(new Builder("Invalid Writing Desk crash fix")
+            .addMixinClasses("bibliocraft.MixinBlockItemWritingDesk").setPhase(Phase.LATE).setSide((Side.BOTH))
+            .setApplyIf(() -> FixesConfig.fixBibliocraftWritingDeskCrash).addTargetedMod(TargetedMod.BIBLIOCRAFT)),
     ZTONES_PACKET_FIX(new Builder("Packet Fix").addMixinClasses("ztones.MixinZtonesPatchPacketExploits")
             .setPhase(Phase.LATE).setSide((Side.BOTH)).setApplyIf(() -> FixesConfig.fixZTonesPackets)
             .addTargetedMod(TargetedMod.ZTONES)),
